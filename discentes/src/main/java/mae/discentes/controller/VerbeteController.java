@@ -1,4 +1,4 @@
-package mae.discentes.resource;
+package mae.discentes.controller;
 
 import mae.discentes.model.Verbete;
 import mae.discentes.repository.VerbeteRepository;
