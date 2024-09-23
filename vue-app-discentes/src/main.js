@@ -4,11 +4,13 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import Home from './pages/discente/Home.vue';
 import Login from './pages/discente/Login.vue';
+import Dictionary from './pages/discente/Dictionary.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
-    { path: '/', component: Login },
-    { path: '/home', component: Home },
+    { path: '/', name: 'Login', component: Login },
+    { path: '/home', name: 'Home', component: Home },
+    { path: '/dictionary', name: 'Dictionary', component: Dictionary },
   ];
   
   const router = createRouter({
