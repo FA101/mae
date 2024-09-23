@@ -29,17 +29,17 @@ public class AvaliacaoEstudante {
     @Max(5)
     private Integer didatica;
 
-    @NotNull
+
     @Min(1)
     @Max(5)
     private Integer metodoDeEnsino;
 
-    @NotNull
+
     @Min(0)
     @Max(4)
     private Integer esclarecimentoDuvidas;
 
-    @NotNull
+
     @Min(0)
     @Max(4)
     private Integer ritmoDeAula;
