@@ -3,6 +3,7 @@ import { ref, onMounted, computed } from 'vue';
 import Sidebar from '../../components/discente/Sidebar.vue';
 import Header from '../../components/discente/Header.vue';
 import SearchBar from '../../components/discente/SearchBar.vue';
+import PrimaryButton from '../../components/discente/PrimaryButton.vue';
 import DictionaryEntry from '../../components/discente/DictionaryEntry.vue';
 // import { fetchEntries } from '../services/api';
 
@@ -44,10 +45,12 @@ onMounted(fetchAndSetEntries);
       <Sidebar />
       <div class="main-content">
         <Header titulo="Dicionário" caminho="Home > Dicionário"/>
-        <!-- <div class="dictionary-view">
-          <SearchBar @update:search="setSearchTerm" />
-          
-          <div class="sort-options">
+        <div class="dictionary-view">
+          <div class="search-action">
+            <SearchBar @update:search="setSearchTerm" />
+            <PrimaryButton acao="Adicionar Verbete"/>
+          </div>
+          <!-- <div class="sort-options">
             <button @click="sortByRelevance">Relevância</button>
           </div>
       
@@ -57,8 +60,8 @@ onMounted(fetchAndSetEntries);
               :key="entry.id"
               :entry="entry"
             />
-          </div>
-        </div> -->
+          </div> -->
+        </div>
       </div>
     </div>
   </template>
@@ -76,6 +79,13 @@ onMounted(fetchAndSetEntries);
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+
+.search-action {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .dictionary-view {

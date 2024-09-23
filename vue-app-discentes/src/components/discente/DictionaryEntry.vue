@@ -3,19 +3,19 @@
 import { ref } from 'vue';
 // import { upvoteEntry, downvoteEntry } from '../services/api';
 
-const props = defineProps({
-  entry: Object,
-});
+// const props = defineProps({
+//   entry: Object,
+// });
 
-const handleUpvote = async () => {
-  await upvoteEntry(entry.id);
-  entry.upvotes++;
-};
+// const handleUpvote = async () => {
+//   await upvoteEntry(entry.id);
+//   entry.upvotes++;
+// };
 
-const handleDownvote = async () => {
-  await downvoteEntry(entry.id);
-  entry.downvotes++;
-};
+// const handleDownvote = async () => {
+//   await downvoteEntry(entry.id);
+//   entry.downvotes++;
+// };
 </script>
 
 
