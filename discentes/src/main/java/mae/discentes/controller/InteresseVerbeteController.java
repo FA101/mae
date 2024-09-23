@@ -1,4 +1,4 @@
-package mae.discentes.resource;
+package mae.discentes.controller;
 
 import mae.discentes.model.Discentes;
 import mae.discentes.model.InteresseVerbete;

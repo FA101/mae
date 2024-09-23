@@ -1,4 +1,4 @@
-package mae.discentes.resource;
+package mae.discentes.controller;
 
 import mae.discentes.model.AvaliacaoEstudante;
 import mae.discentes.repository.AvaliacaoEstudanteRepository;
@@ -10,7 +10,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/avaliacoes")
+@RequestMapping("/avaliacoes")    // localhost:8080/avaliacoes
 public class AvaliacaoEstudanteController {
 
     @Autowired
@@ -21,8 +21,8 @@ public class AvaliacaoEstudanteController {
         return avaliacaoEstudanteRepository.findAll();
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<AvaliacaoEstudante> buscarAvaliacao(@PathVariable Long id) {
+    @GetMapping("/{id}")// localhost:8080/avaliacoes/2            sendo 2 para achar a pessoa com id 2 no banco
+    public ResponseEntity<AvaliacaoEstudante> buscarAvaliacao(@PathVariable Long id) {  //pathvariable indica que o dado vai vir pelo URL
         return avaliacaoEstudanteRepository.findById(id)
                 .map(avaliacao -> ResponseEntity.ok(avaliacao))
                 .orElse(ResponseEntity.notFound().build());

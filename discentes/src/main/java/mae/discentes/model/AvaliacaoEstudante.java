@@ -44,6 +44,7 @@ public class AvaliacaoEstudante {
     @Max(4)
     private Integer ritmoDeAula;
 
+    @Max(800)
     private String comentario; // Comentário anônimo no front
 
     public Long getId() {
