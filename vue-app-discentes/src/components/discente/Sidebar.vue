@@ -1,4 +1,18 @@
 <script setup>
+import { useRouter } from 'vue-router';
+import { ref, toRefs } from 'vue';
+
+const router = useRouter();
+const goToDictionary = () => {
+  router.push('/dictionary');
+}
+const goToHome = () => {
+  router.push('/home');
+}
+// const goToFeedback = () => {
+//   router.push('/feedback');
+// }
+
 </script>
 
 
@@ -6,11 +20,13 @@
     <div class="sidebar">
       <div>
           <div class="logo">
-            <h1>M A E <br> Discentes</h1>
+            <button @click="goToHome">
+              <h1>M A E <br> Discentes</h1>
+            </button>
           </div>
           <ul>
-            <li><a href="#">Dicionário</a></li>
-            <li><a href="#">Feedback</a></li>
+            <li><button @click="goToDictionary">Dicionário</button></li>
+            <li><button @click="">Feedback</button></li>
           </ul>
       </div>
       <div class="settings">
@@ -39,29 +55,44 @@
     font-size: 1.5rem;
     font-weight: bold;
     color: black;
-    margin-bottom: 40px;
   }
   
   ul {
     list-style: none;
     padding: 0;
+    margin-top: 40px;
   }
   
   ul li {
-    padding: 7px;
     margin-bottom: 15px;
-    border-radius: 10px;
   }
 
-  ul li:hover {
-    background-color: white;
-  }
-  
-  ul li a {
+  ul li button {
     text-decoration: none;
     color: black;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff00;
+    padding: 7px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
   }
   
+  ul li button:hover {
+    background-color: white;
+  }
+
+  div button {
+    background-color: #ffffff00;
+    border: none;
+    cursor: pointer;
+  }
+
   .settings {
     display: flex;
     align-items: center;
