@@ -38,6 +38,7 @@
   .logo h1 {
     font-size: 1.5rem;
     font-weight: bold;
+    color: black;
     margin-bottom: 40px;
   }
   
