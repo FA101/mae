@@ -1,30 +1,31 @@
+<script setup>
+import { ref, toRefs } from 'vue';
+
+const props = defineProps({
+  label: String,
+  type: {
+    type: String,
+    default: 'text'
+  },
+  placeholder: String
+});
+
+const emit = defineEmits(['update:value']);
+const { label, type, placeholder } = toRefs(props);
+const inputValue = ref('');
+
+const updateInput = () => {
+  emit('update:value', inputValue.value);
+};
+</script>
+
 <template>
     <div class="input-group">
       <label>{{ label }}</label>
       <input :type="type" v-model="inputValue" :placeholder="placeholder" @input="updateInput" />
     </div>
   </template>
-  
-  <script setup>
-  import { ref, toRefs } from 'vue';
-  
-  const props = defineProps({
-    label: String,
-    type: {
-      type: String,
-      default: 'text'
-    },
-    placeholder: String
-  });
-  
-  const emit = defineEmits(['update:value']);
-  const { label, type, placeholder } = toRefs(props);
-  const inputValue = ref('');
-  
-  const updateInput = () => {
-    emit('update:value', inputValue.value);
-  };
-  </script>
+
   
   <style scoped>
   .input-group {

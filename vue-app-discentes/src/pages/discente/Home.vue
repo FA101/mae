@@ -9,7 +9,7 @@ import HomeContent from '../../components/discente/HomeContent.vue';
     <div class="home-layout">
       <Sidebar />
       <div class="main-content">
-        <Header />
+        <Header titulo="Home" caminho="Home"/>
         <HomeContent />
       </div>
     </div>
