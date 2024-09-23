@@ -1,11 +1,18 @@
 <template>
-    <LoginForm />
-</template>
-
-<script setup>
-import LoginForm from './components/discente/LoginForm.vue';
-</script>
-
-<style scoped>
-
-</style>
+    <router-view />
+  </template>
+  
+  <script setup>
+  </script>
+  
+  <style>
+  body {
+    margin: 0;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+  </style>
+  
