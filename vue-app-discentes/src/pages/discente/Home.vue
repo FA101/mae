@@ -15,7 +15,8 @@ import HomeContent from '../../components/discente/HomeContent.vue';
     </div>
   </template>
   
-  <style scoped>
+
+<style scoped>
   .home-layout {
     display: flex;
   }
@@ -27,5 +28,5 @@ import HomeContent from '../../components/discente/HomeContent.vue';
     flex-direction: column;
     height: 100vh;
   }
-  </style>
+</style>
   
