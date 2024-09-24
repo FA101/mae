@@ -13,11 +13,13 @@ public class Discentes {
 
     private String nome;
     private String email;
+    private String password;
 
-    public Discentes(Long id, String nome, String email) {
+    public Discentes(Long id, String nome, String email, String password) {
         this.id = id;
         this.nome = nome;
         this.email = email;
+        this.password = password;
     }
 
     public Discentes() {
@@ -46,6 +48,14 @@ public class Discentes {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
 
