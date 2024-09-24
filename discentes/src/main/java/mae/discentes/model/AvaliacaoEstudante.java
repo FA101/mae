@@ -24,7 +24,7 @@ public class AvaliacaoEstudante {
     @NotNull
     private LocalDateTime data;
 
-    @NotNull
+
     @Min(1)
     @Max(5)
     private Integer didatica;

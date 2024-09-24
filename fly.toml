@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for discentes on 2024-09-24T14:20:09-03:00
+# fly.toml app configuration file generated for mae on 2024-09-23T15:38:39-03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'discentes'
+app = 'mae'
 primary_region = 'gru'
 
 [http_service]
