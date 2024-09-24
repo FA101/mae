@@ -50,5 +50,5 @@ public class InteresseVerbeteId implements Serializable {
     public void setVerbeteId(Long verbeteId) {
         this.verbeteId = verbeteId;
     }
-    // Construtores, equals e hashCode
+
 }
