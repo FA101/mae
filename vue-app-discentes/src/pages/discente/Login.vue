@@ -36,12 +36,7 @@
   const router = useRouter();
   
   const handleLogin = () => {
-    // Lógica de autenticação aqui (exemplo)
-    if (email.value === 'aluno@example.com' && password.value === '123456') {
       router.push('/home'); // Redireciona para a Home se o login for bem-sucedido
-    } else {
-      alert('Credenciais incorretas');
-    }
   };
   </script>
   
