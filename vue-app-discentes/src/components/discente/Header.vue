@@ -43,6 +43,7 @@ const { titulo, caminho } = toRefs(props);
     padding: 20px;
     border-bottom: 1px solid #63676C;
     margin-left: 10px;
+    margin-bottom: 20px;
   }
 
   .titulo-caminho {

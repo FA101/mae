@@ -21,13 +21,12 @@ const { acao } = toRefs(props);
 
 button {
     padding: 13px 20px;
-    background-color: #63676C;
+    background-color: white;
     border-radius: 10px;
-    color: white;
+    color: #63676C;
     font-weight: bold;
-    border: none;
+    border: 1px solid  #63676C;
     cursor: pointer;
-
 }
 
 </style>

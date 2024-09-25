@@ -15,6 +15,10 @@ const entry = ref({
   downvotes: 3
 })
 
+const router = useRouter();
+const goToAddVerbete = () => {
+  router.push('/addVerbete');
+}
 
 </script>
 
@@ -27,11 +31,8 @@ const entry = ref({
         <div class="dictionary-view">
           <div class="search-action">
             <SearchBar @update:search="setSearchTerm" />
-            <PrimaryButton acao="Adicionar Verbete"/>
+            <PrimaryButton @click="goToAddVerbete" acao="Adicionar Verbete"/>
           </div>
-          <!-- <div class="sort-options">
-            <button @click="sortByRelevance">Relevância</button>
-          </div>  -->
       
           <div class="entries-list">
             <DictionaryEntry />
@@ -67,9 +68,11 @@ const entry = ref({
 .dictionary-view {
   padding: 16px;
 }
+
 .sort-options {
   margin-bottom: 16px;
 }
+
 .entries-list {
   padding: 0px 30px;
   display: flex;
