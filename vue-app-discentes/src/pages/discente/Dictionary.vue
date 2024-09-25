@@ -7,27 +7,21 @@ import SearchBar from '../../components/discente/SearchBar.vue';
 import PrimaryButton from '../../components/discente/PrimaryButton.vue';
 import DictionaryEntry from '../../components/discente/DictionaryEntry.vue';
 
-const entries = ref([{
-  id: 1, 
-  titulo: 'Verbete 1',
-  topComment: 'Lorem Ipsum alguma coisa, algo para teste',
-  upvotes: 15,
-  downvotes: 3
-},
-{
-  id: 2, 
-  titulo: 'Verbete 2',
-  topComment: 'Lorem Ipsum alguma coisa, algo para teste',
-  upvotes: 13,
-  downvotes: 5
-},
-])
+const entries = ref([])
 
 const router = useRouter();
 const goToAddVerbete = () => {
   router.push('/addVerbete');
 }
 
+// Função para buscar verbetes do backend
+const fetchAndSetEntries = async () => {
+  const data = await fetchEntries();
+  entries.value = data
+};
+
+// Buscar os verbetes quando o componente é montado
+onMounted(fetchAndSetEntries);
 </script>
 
 

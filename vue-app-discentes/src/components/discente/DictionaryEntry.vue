@@ -26,15 +26,15 @@ const { entry } = toRefs(props);
       
         <div class="card-top">
           <button>
-            <h3> {{ entry.titulo }} </h3>
+            <h3> {{ entry.descricaoVerbete }} </h3>
           </button>
           <div class="entry-votes">
-            <button class="vote">👍 {{ entry.upvotes }}</button>
-            <button class="vote">👎 {{ entry.downvotes }}</button>
+            <button class="vote">👍 {{ entry.upvote }}</button>
+            <button class="vote">👎 {{ entry.downvote }}</button>
           </div>
         </div>
         <button>
-          <p><strong>Top Comentário</strong> <br> {{ entry.topComment }}</p>
+          <p><strong>Top Comentário</strong> <br> {{ entry.conteudos }}</p>
         </button>
 
     </div>
