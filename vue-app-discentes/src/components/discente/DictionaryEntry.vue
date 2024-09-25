@@ -1,13 +1,13 @@
 
 <script setup>
-// import { ref, toRefs } from 'vue';
+import { ref, toRefs } from 'vue';
 // import { upvoteEntry, downvoteEntry } from '../services/api';
 
-// const props = defineProps({
-//   entry: Object,
-// });
+const props = defineProps({
+  entry: Object,
+});
 
-// const { entry } = toRefs(props);
+const { entry } = toRefs(props);
 
 // const handleUpvote = async () => {
 //   await upvoteEntry(entry.id);
@@ -26,15 +26,15 @@
       
         <div class="card-top">
           <button>
-            <h3> Verbete 1 </h3>
+            <h3> {{ entry.titulo }} </h3>
           </button>
           <div class="entry-votes">
-            <button class="vote">👍 15</button>
-            <button class="vote">👎 2</button>
+            <button class="vote">👍 {{ entry.upvotes }}</button>
+            <button class="vote">👎 {{ entry.downvotes }}</button>
           </div>
         </div>
         <button>
-          <p><strong>Top Comentário</strong> <br> Lorem ipsum dolor sit amet. Et quia repudiandae ab unde quos qui impedit voluptas est obcaecati nisi ut reprehenderit officiis. Id voluptas consequuntur et tenetur saepe qui quaerat provident. Cum deserunt explicabo id voluptatibus voluptates ut velit harum sit deserunt alias.</p>
+          <p><strong>Top Comentário</strong> <br> {{ entry.topComment }}</p>
         </button>
 
     </div>
@@ -82,4 +82,4 @@
     text-overflow: ellipsis;
   }
   </style>
-  
+ 

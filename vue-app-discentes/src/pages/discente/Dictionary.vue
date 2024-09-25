@@ -7,13 +7,21 @@ import SearchBar from '../../components/discente/SearchBar.vue';
 import PrimaryButton from '../../components/discente/PrimaryButton.vue';
 import DictionaryEntry from '../../components/discente/DictionaryEntry.vue';
 
-const entry = ref({
-  id: 0, 
-  title: 'Verbete 1',
+const entries = ref([{
+  id: 1, 
+  titulo: 'Verbete 1',
   topComment: 'Lorem Ipsum alguma coisa, algo para teste',
   upvotes: 15,
   downvotes: 3
-})
+},
+{
+  id: 2, 
+  titulo: 'Verbete 2',
+  topComment: 'Lorem Ipsum alguma coisa, algo para teste',
+  upvotes: 13,
+  downvotes: 5
+},
+])
 
 const router = useRouter();
 const goToAddVerbete = () => {
@@ -35,7 +43,9 @@ const goToAddVerbete = () => {
           </div>
       
           <div class="entries-list">
-            <DictionaryEntry />
+            <DictionaryEntry 
+              v-for="entry in entries"
+              :entry="entry"/>
           </div>
         </div>
       </div>
