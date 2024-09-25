@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import LoginInput from '../../components/discente/LoginInput.vue';
+import LoginInput from '../../components/discente/PrimaryInput.vue';
 
 const email = ref('');
 const password = ref('');
@@ -18,18 +18,20 @@ const handleLogin = () => {
     <h1>MAE Discentes</h1>
     <form @submit.prevent="submitForm">
       <h2>Login</h2>
-      <LoginInput
-        label=""
-        type="email"
-        placeholder="Email"
-        v-model:value="email"
-      />
-      <LoginInput
-        label=""
-        type="password"
-        placeholder="Senha"
-        v-model:value="password"
-      />
+      <div class="inputs">
+        <LoginInput
+          label=""
+          type="email"
+          placeholder="Email"
+          v-model:value="email"
+        />
+        <LoginInput
+          label=""
+          type="password"
+          placeholder="Senha"
+          v-model:value="password"
+        />
+      </div>
       <div class="extra-options">
         <a href="#">Esqueci minha senha</a>
       </div>
@@ -67,6 +69,12 @@ h2 {
 form {
   display: flex;
   flex-direction: column;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 button {

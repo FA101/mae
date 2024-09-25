@@ -33,12 +33,13 @@ const updateInput = () => {
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
-    align-self: center;
+    /* align-self: center; */
   }
 
   label {
     font-weight: bold;
     margin-bottom: 5px;
+    align-self: self-start;
   }
 
   input {
