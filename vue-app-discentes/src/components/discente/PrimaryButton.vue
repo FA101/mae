@@ -2,8 +2,6 @@
 import { ref, toRefs } from 'vue';
 const props = defineProps({
   acao: String,
-  icone: Boolean,
-
 });
 
 const { acao } = toRefs(props);
