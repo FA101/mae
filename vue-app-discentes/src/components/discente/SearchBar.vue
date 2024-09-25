@@ -23,8 +23,8 @@
     color: #63676C;
     border: none;
     width: 70%;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 15px;
+    border-radius: 15px;
   }
   </style>
   
