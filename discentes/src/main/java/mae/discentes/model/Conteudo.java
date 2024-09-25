@@ -8,9 +8,6 @@ public class Conteudo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ManyToOne
-    @JoinColumn(name = "verbete_id")
-    private Verbete verbete;
 
     private Integer upvote;
 
@@ -21,7 +18,6 @@ public class Conteudo {
 
     public Conteudo(Long id, Verbete verbete, Integer upvote, Integer downvote, String conteudo) {
         this.id = id;
-        this.verbete = verbete;
         this.upvote = upvote;
         this.downvote = downvote;
         this.conteudo = conteudo;
@@ -38,14 +34,7 @@ public class Conteudo {
     public void setId(Long id) {
         this.id = id;
     }
-
-    public Verbete getVerbete() {
-        return verbete;
-    }
-
-    public void setVerbete(Verbete verbete) {
-        this.verbete = verbete;
-    }
+    
 
     public Integer getUpvote() {
         return upvote;

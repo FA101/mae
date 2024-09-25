@@ -11,7 +11,7 @@ public class Verbete {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "verbete", cascade = CascadeType.ALL)
+    @OneToMany()
     private List<Conteudo> conteudos = new ArrayList<>();
 
     private Integer upvote = 0;
