@@ -1,10 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-  }
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+html,
+body,
+
+#app {
+  height: 100%;
+  margin: 0;
+  /* Para remover margens padrão */
+}
+
+body,
+#app {
+  width: 100%;
+}
